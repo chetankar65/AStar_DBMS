@@ -761,3 +761,10 @@ INNER JOIN BOOKING on BOOKS_FLIGHT.BookingID = BOOKING.BookingID
 INNER JOIN Airport A1 on A1.AirportID = Flight.DepartureAirport
 INNER JOIN Airport A2 on A2.AirportID = Flight.ArrivalAirport
 WHERE BOOKING.UserID = (SELECT UserID FROM USER WHERE email = 'aryan.das@example.com');
+
+----- Display hotels along with roomtypes present in Bengaluru, Mumbai and Chennai
+SELECT Hotel.HotelName AS Hotel_name, City.Name AS City, ROOM_TYPES.TypeName as Room_type, ROOM_TYPES.Count AS Rooms_available FROM ROOM_TYPES
+JOIN Hotel on Hotel.HotelId = ROOM_TYPES.HotelID
+JOIN City on City.CityID = Hotel.CityID
+WHERE City.CityID in (Select CityID from CITY where City.Name = 'Bengaluru' or City.Name = 'Mumbai' 
+or City.Name = 'Chennai');
