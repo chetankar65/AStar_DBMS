@@ -1,4 +1,4 @@
-INSERT INTO USER (UserId, PasswordHash, FirstName, LastName, MiddleName, Email) 
+INSERT INTO USER (UserId, Password, FirstName, LastName, MiddleName, Email) 
 VALUES 
 (1, SHA2('password1', 256), 'Chetan', 'Kar', NULL, 'chetankar65@gmail.com'),
 (2, SHA2('password2', 256), 'Aarav', 'Patel', 'Kumar', 'aarav.patel@example.com'),
