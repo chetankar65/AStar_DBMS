@@ -1,14 +1,15 @@
-INSERT INTO USER (UserId, Password, FirstName, LastName, MiddleName, Email) 
-VALUES (1, 'password1', 'Chetan', 'Kar', NULL, 'chetankar65@gmail.com'),
-(2, 'password2', 'Aarav', 'Patel', 'Kumar', 'aarav.patel@example.com'),
-(3, 'password3', 'Ananya', 'Sharma', 'Singh', 'ananya.sharma@example.com'),
-(4, 'password4', 'Aryan', 'Das', 'Gupta', 'aryan.das@example.com'),
-(5, 'password5', 'Neha', NULL, NULL, 'neha.joshi@example.com'),
-(6, 'password6', 'Rahul', 'Gupta', 'Sharma', 'rahul.gupta@example.com'),
-(7, 'password7', 'Priya', NULL, 'Kumari', 'priya.verma@example.com'),
-(8, 'password8', 'Ravi', 'Malhotra', 'Singh', 'ravi.malhotra@example.com'),
-(9, 'password9', 'Sneha', 'Choudhary', 'Yadav', 'sneha.choudhary@example.com'),
-(10, 'password10', 'Shubham', 'Pahilwani', NULL, 'shubhampahilwani1@gmail.com');
+INSERT INTO USER (UserId, PasswordHash, FirstName, LastName, MiddleName, Email) 
+VALUES 
+(1, SHA2('password1', 256), 'Chetan', 'Kar', NULL, 'chetankar65@gmail.com'),
+(2, SHA2('password2', 256), 'Aarav', 'Patel', 'Kumar', 'aarav.patel@example.com'),
+(3, SHA2('password3', 256), 'Ananya', 'Sharma', 'Singh', 'ananya.sharma@example.com'),
+(4, SHA2('password4', 256), 'Aryan', 'Das', 'Gupta', 'aryan.das@example.com'),
+(5, SHA2('password5', 256), 'Neha', NULL, NULL, 'neha.joshi@example.com'),
+(6, SHA2('password6', 256), 'Rahul', 'Gupta', 'Sharma', 'rahul.gupta@example.com'),
+(7, SHA2('password7', 256), 'Priya', NULL, 'Kumari', 'priya.verma@example.com'),
+(8, SHA2('password8', 256), 'Ravi', 'Malhotra', 'Singh', 'ravi.malhotra@example.com'),
+(9, SHA2('password9', 256), 'Sneha', 'Choudhary', 'Yadav', 'sneha.choudhary@example.com'),
+(10, SHA2('password10', 256), 'Shubham', 'Pahilwani', NULL, 'shubhampahilwani1@gmail.com');
 
 INSERT INTO CITY (CityID, Name, State, Country)
 VALUES
