@@ -41,3 +41,21 @@ JOIN Hotel on Hotel.HotelId = ROOM_TYPES.HotelID
 JOIN City on City.CityID = Hotel.CityID
 WHERE City.CityID in (Select CityID from CITY where City.Name = 'Bengaluru' or City.Name = 'Mumbai' 
 or City.Name = 'Chennai');
+
+---- Display average price of hotel rooms present in hotels in Bengaluru
+Select City.Name, ROUND(AVG(ROOM_TYPES.Price), 2) AS Avg_cost_per_night FROM ROOM_TYPES
+INNER JOIN HOTEL ON Hotel.HotelID = ROOM_TYPES.HotelID
+INNER JOIN CITY ON City.CityID = Hotel.CityID
+WHERE City.CityID = (Select CityId from City where City.Name = 'Bengaluru')
+GROUP BY City.CityID;  
+
+---- Display Hotel rooms in bengaluru that have below average price
+Select Hotel.HotelName, ROOM_TYPES.TypeName, ROOM_TYPES.Price FROM ROOM_TYPES
+INNER JOIN HOTEL ON Hotel.HotelID = ROOM_TYPES.HotelID
+INNER JOIN CITY ON City.CityID = Hotel.CityID
+WHERE City.CityID = (Select CityId from City where City.Name = 'Bengaluru')
+AND ROOM_TYPES.Price < (SELECT ROUND(AVG(ROOM_TYPES.Price), 2) AS Avg_cost_per_night FROM ROOM_TYPES
+INNER JOIN HOTEL ON Hotel.HotelID = ROOM_TYPES.HotelID
+INNER JOIN CITY ON City.CityID = Hotel.CityID
+WHERE City.CityID = (Select CityId from City where City.Name = 'Bengaluru')
+GROUP BY City.CityID);
