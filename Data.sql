@@ -11,7 +11,7 @@ VALUES
 (9, SHA2('password9', 256), 'Sneha', 'Choudhary', 'Yadav', 'sneha.choudhary@example.com'),
 (10, SHA2('password10', 256), 'Shubham', 'Pahilwani', NULL, 'shubhampahilwani1@gmail.com');
 
-INSERT INTO PHONENUMBERS (UserID, PhoneNumber)
+INSERT INTO PHONE_NUMBERS (UserID, PhoneNumber)
 VALUES
     (1, '1234567890'), -- Chetan Kar
     (1, '9876543210'), -- Chetan Kar (multiple phone numbers)
@@ -219,7 +219,7 @@ VALUES
 (4, 'Netbanking', '2024-4-5 15:00', 6000, 4),
 (5, 'UPI', '2024-4-5 15:00', 7000, 5);
 
-INSERT INTO BOOKS_BUS (BookingID, BusID)
+INSERT INTO BOOKS_BUS (BookingID, BusID, SeatCount)
 VALUES
 (1, 3001, 2),
 (2, 3393, 1);
