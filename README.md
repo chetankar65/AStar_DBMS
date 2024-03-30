@@ -12,8 +12,8 @@ their own travel itinerary or book packages through registered travel agents. Pa
 <br>
 
 <u><b>Relational Model schema:<b>-</u> <br>
+![image](https://github.com/chetankar65/AStar_DBMS/assets/26086224/16681920-f6eb-40c9-9d91-bb8f34d48637)
 
-![Relational Model](https://github.com/chetankar65/AStar_DBMS/assets/26086224/0a661005-ce88-4dbf-b1a4-ebfed1ff8198)
 <br>
 <hr>
 <u>Team members: </u><br>
