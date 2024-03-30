@@ -11,6 +11,20 @@ VALUES
 (9, SHA2('password9', 256), 'Sneha', 'Choudhary', 'Yadav', 'sneha.choudhary@example.com'),
 (10, SHA2('password10', 256), 'Shubham', 'Pahilwani', NULL, 'shubhampahilwani1@gmail.com');
 
+INSERT INTO PHONENUMBERS (UserID, PhoneNumber)
+VALUES
+    (1, '1234567890'), -- Chetan Kar
+    (1, '9876543210'), -- Chetan Kar (multiple phone numbers)
+    (2, '2345678901'), -- Aarav Patel
+    (3, '3456789012'), -- Ananya Sharma
+    (4, '4567890123'), -- Aryan Das
+    (5, '5678901234'), -- Neha Joshi
+    (6, '6789012345'), -- Rahul Gupta
+    (7, '7890123456'), -- Priya Verma
+    (8, '8901234567'), -- Ravi Malhotra
+    (9, '9012345678'), -- Sneha Choudhary
+    (10, '0123456789'); -- Shubham Pahilwani
+
 INSERT INTO CITY (CityID, Name, State, Country)
 VALUES
 (1, 'Bengaluru', 'Karnataka', 'India'),
@@ -37,25 +51,26 @@ INSERT INTO Airport
 (9, 'DV Patil International Airport', 2),
 (10, 'Dumdum Airport', 9);
 
-INSERT INTO HOTEL (HotelID, HotelName, CityID) 
+INSERT INTO HOTEL (HotelID, HotelName, CityID, Pincode) 
 VALUES 
-(1, 'Taj Mahal Palace', 2),
-(2, 'ITC Gardenia', 1),    
-(3, 'Taj Falaknuma Palace', 3),
-(4, 'JW Marriott Marquis Hotel Dubai', 4),
-(5, 'The Plaza Hotel', 5), 
-(6, 'The Ritz London', 6),  
-(7, 'The St. Regis San Francisco', 7),
-(8, 'Fairmont Jaipur', 8),  
-(9, 'The Oberoi Bengaluru', 1), 
-(10, 'Taj Lands End, Mumbai', 2), 
-(11, 'ITC Kakatiya, Hyderabad', 3),
-(12, 'Burj Al Arab Jumeirah', 4), 
-(13, 'The Peninsula New York', 5), 
-(14, 'The Langham London', 6), 
-(15, 'Hotel Nikko San Francisco', 7), 
-(16, 'Rambagh Palace, Jaipur', 8),
-(17, 'JW Marriot Chennai', 10);
+(1, 'Taj Mahal Palace', 2, '400001'),
+(2, 'ITC Gardenia', 1, '560001'),    
+(3, 'Taj Falaknuma Palace', 3, '500001'),
+(4, 'JW Marriott Marquis Hotel Dubai', 4, '123456'),
+(5, 'The Plaza Hotel', 5, '10001'), 
+(6, 'The Ritz London', 6, 'W1J 9BR'),  
+(7, 'The St. Regis San Francisco', 7, '94103'),
+(8, 'Fairmont Jaipur', 8, '302002'),  
+(9, 'The Oberoi Bengaluru', 1, '560001'), 
+(10, 'Taj Lands End, Mumbai', 2, '400050'), 
+(11, 'ITC Kakatiya, Hyderabad', 3, '500082'),
+(12, 'Burj Al Arab Jumeirah', 4, '123456'), 
+(13, 'The Peninsula New York', 5, '10019'), 
+(14, 'The Langham London', 6, 'SE1 1UN'), 
+(15, 'Hotel Nikko San Francisco', 7, '94108'), 
+(16, 'Rambagh Palace, Jaipur', 8, '302005'),
+(17, 'JW Marriot Chennai', 10, '600008');
+
 
 INSERT INTO ROOM_TYPES (TypeName, Count, Price, HotelID) 
 VALUES ('Luxury Suite', 10, 500.00, 1),
@@ -206,8 +221,8 @@ VALUES
 
 INSERT INTO BOOKS_BUS (BookingID, BusID)
 VALUES
-(1, 3001),
-(2, 3393);
+(1, 3001, 2),
+(2, 3393, 1);
 
 INSERT INTO BOOKS_ROOM (CheckInDate, CheckOutDate, Quantity, BookingId, TypeName, HotelId)
 VALUES
@@ -285,5 +300,5 @@ VALUES
 
 INSERT INTO BOOKS_FLIGHT
 VALUES 
-(4, 1),
-(5, 1);
+(4, 1, 1),
+(5, 1, 2);
