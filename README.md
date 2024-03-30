@@ -8,8 +8,9 @@ their own travel itinerary or book packages through registered travel agents. Pa
 
 <u><b>Entity Relationship Diagram:<b>-</u> <br>
 
-![ER Diagram](https://github.com/chetankar65/AStar_DBMS/assets/26086224/dfc1bb10-a976-430a-8070-5d51012958e9)
+![ER Diagram](https://github.com/chetankar65/AStar_DBMS/assets/26086224/8c351437-4b73-46cd-92bb-d26916cd9da4)
 <br>
+
 <u><b>Relational Model schema:<b>-</u> <br>
 
 ![Relational Model](https://github.com/chetankar65/AStar_DBMS/assets/26086224/0a661005-ce88-4dbf-b1a4-ebfed1ff8198)
